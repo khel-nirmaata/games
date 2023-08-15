@@ -1,2 +1,2 @@
-# khelnirmata.github.io
-https://khelnirmata.github.io/
+# khel-nirmata.github.io
+https://khel-nirmata.github.io/
