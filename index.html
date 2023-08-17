@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Game Selection</title>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      /* font-family: Arial, sans-serif; */
+      font-family: 'Montserrat';
+      background-color: #181818;
     }
+
     .game-container {
       display: flex;
       flex-wrap: wrap;
@@ -18,56 +22,74 @@
       gap: 20px;
       padding: 20px;
     }
+
     .game-card {
       width: 300px;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 20px;
       background-color: #fff;
       overflow: hidden;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
     .game-banner {
       width: 100%;
       height: auto;
     }
+
     .game-details {
       padding: 10px;
     }
+
     .play-link {
       display: block;
-      width: 100%;
+      width: 92%;
       padding: 8px 12px;
       background-color: #007bff;
       color: #fff;
       border: none;
-      border-radius: 5px;
+      border-radius: 36px;
       font-size: 16px;
       text-align: center;
       text-decoration: none;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
+
     .play-link:hover {
       background-color: #0056b3;
     }
   </style>
 </head>
+
 <body>
   <div class="game-container">
+
     <div class="game-card">
-      <img class="game-banner" src="https://placehold.co/600x400" alt="Game 1">
+      <img class="game-banner" src="https://i.ibb.co/qpsqjv9/00753.png" alt="Game 1">
       <div class="game-details">
         <h2>Plinko</h2>
         <a class="play-link" href="Plinko/">Play</a>
       </div>
     </div>
+
     <div class="game-card">
       <img class="game-banner" src="https://placehold.co/600x400" alt="Game 2">
       <div class="game-details">
         <h2>Baccarat</h2>
         <a class="play-link" href="#">coming soon...</a>
       </div>
-    </div>      
+    </div>
+
+    <div class="game-card">
+      <img class="game-banner" src="https://placehold.co/600x400" alt="Game 2">
+      <div class="game-details">
+        <h2>Niu Niu</h2>
+        <a class="play-link" href="#">coming soon...</a>
+      </div>
+    </div>
+
   </div>
 </body>
+
 </html>
