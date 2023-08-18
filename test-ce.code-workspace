@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../Web Apps/test-ce"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "games"
+	}
+}
