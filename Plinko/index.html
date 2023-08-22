@@ -131,14 +131,33 @@
   </script>
 
   <script>
+
     // Function which receives a message from Unity
     function receiveMessageFromUnity(message) {
-      console.log(message);
+
+      console.log("MESSAGE FROM UNITY: " + message);
+
+      switch (message) {
+        case "SCREEN_MAXIMIZE":
+          SetFullscreen(1);
+          break;
+
+        case "SCREEN_MINIMIZE":
+          SetFullscreen(0);
+          break;
+
+        default:
+          break;
+      }
     }
 
     // Function which sends the message to Unity
     function sendMessageToUnity() {
       uInstance.SendMessage("[Bridge]", "ReceiveMessageFromPage", "test message from web page");
+    }
+
+    function SetFullscreen(value) {
+      uInstance.SetFullscreen(value);
     }
 
   </script>
