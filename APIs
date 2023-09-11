@@ -1,0 +1,97 @@
+GUID
+WebHttpRequest with headers and json post sample
+
+###
+#POST http://localhost:3080/v1/game/create-session?gameid=plinko
+POST https://test-games-backend-api.augmentlabs.io/v1/game/create-session?gameid=plinko
+Content-Type: application/json
+X-Uscgame-Api-Id: Ein5Ke6GahPuhee1thahHaems
+X-Uscgame-Signature:   
+
+{
+    "ssoId":"v04roexut1nui0rbwpc3nong",
+    "email":"ignatius@augmentlabs.io",
+    "fullName":"Panda IG"
+}
+
+
+Resquest:
+###
+POST https://test-games-backend-api.augmentlabs.io/v1/game/validate-session
+# POST https://test-games-backend-api.augmentlabs.io/v1/game/validate-session
+Content-Type: application/json
+gameid: plinko
+
+{
+    "accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NGZjODJkNzc3MDJiMzc5MTA3ZmVmNTEiLCJpYXQiOjE2OTQ0NDk0MDcsImV4cCI6MTY5NDQ4NTQwNywidHlwZSI6ImdhbWVTZXNzaW9uIn0.OxIyztgIRylktZ6wL-kQIxLlJq81KFlYjN7XyPPX0dQ"
+}
+
+Response: {
+  "success": true,
+  "data": {
+    "gameBalance": "",
+    "tokens": {
+      "access": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NGZjODJkNzc3MDJiMzc5MTA3ZmVmNTEiLCJpYXQiOjE2OTQ0MDk4NTAsImV4cCI6MTY5NDQxMTY1MCwidHlwZSI6ImFjY2VzcyJ9.le1w21FQet7RUtCKqBRCOeQG64Vxx_Fmyi0O6vkSRg0",
+        "expires": "2023-09-11T05:54:10.222Z"
+      },
+      "refresh": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NGZjODJkNzc3MDJiMzc5MTA3ZmVmNTEiLCJpYXQiOjE2OTQ0MDk4NTAsImV4cCI6MTY5NDQ5NjI1MCwidHlwZSI6InJlZnJlc2gifQ.LBc0ECAla_ZuzDfPN119cmVk2nXSx2PN-nlJJPkHVyY",
+        "expires": "2023-09-12T05:24:10.225Z"
+      }
+    },
+    "user": {
+      "ssoid": "v04roexut1nui0rbwpc3nong",
+      "email": "ignatius@augmentlabs.io",
+      "name": "Panda IG"
+    }
+  }
+}
+
+
+
+
+###
+POST http://localhost:3080/v1/auth/refresh-tokens
+# POST https://test-games-backend-api.augmentlabs.io/v1/auth/refresh-tokens
+Content-Type: application/json
+gameid: plinko
+
+{
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NGZjODJkNzc3MDJiMzc5MTA3ZmVmNTEiLCJpYXQiOjE2OTQ0MDgyNzMsImV4cCI6MTY5NDQ0NDI3MywidHlwZSI6ImdhbWVTZXNzaW9uIn0.e_WJ1wvBH_K_746BDBMcS7lxguST5lISUmP4d3HH5_I"
+}
+
+###
+# POST https://test-games-backend-api.augmentlabs.io/v1/game/get-balance
+POST https://test-games-backend-api.augmentlabs.io/v1/game/get-balance
+Content-Type: application/json
+gameid: plinko
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NGZjODJkNzc3MDJiMzc5MTA3ZmVmNTEiLCJpYXQiOjE2OTQ0NDc0NDMsImV4cCI6MTY5NDQ4MzQ0MywidHlwZSI6ImdhbWVTZXNzaW9uIn0.3QodaKdGRd1i1uNnEOIwWeMxAi2aFaekxjHOQxxM-E4
+
+{}
+
+###
+# POST https://test-games-backend-api.augmentlabs.io/v1/game/bet
+POST http://localhost:3080/v1/game/bet
+Content-Type: application/json
+gameid: plinko
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NGZjODJkNzc3MDJiMzc5MTA3ZmVmNTEiLCJpYXQiOjE2OTQ0MDk4NTAsImV4cCI6MTY5NDQ5NjI1MCwidHlwZSI6InJlZnJlc2gifQ.LBc0ECAla_ZuzDfPN119cmVk2nXSx2PN-nlJJPkHVyY
+
+{
+    "amount": 1,
+    "betCode": "1",
+    "roundCode": "d84a8e91-b0fa-47a0-8812-ac7d09beb302"
+}
+
+###
+# POST https://test-games-backend-api.augmentlabs.io/v1/game/win
+POST http://localhost:3080/v1/game/win
+Content-Type: application/json
+gameid: plinko
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NGZjODJkNzc3MDJiMzc5MTA3ZmVmNTEiLCJpYXQiOjE2OTQ0MDk4NTAsImV4cCI6MTY5NDQ5NjI1MCwidHlwZSI6InJlZnJlc2gifQ.LBc0ECAla_ZuzDfPN119cmVk2nXSx2PN-nlJJPkHVyY
+
+{
+    "amount": 0.2,
+    "betCode": "1",
+    "roundCode": "d84a8e91-b0fa-47a0-8812-ac7d09beb302"
+}
