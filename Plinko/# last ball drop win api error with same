@@ -1,0 +1,6 @@
+# last ball drop win api error with same repeate bet count
+# API user balance Sync
+# Stop game on API error
+# ball route logic (ball path decision array)
+# Maximum bet amount for slider to be 1000000 in the increments of (10x2) 
+# testing for the probability of win multipliers after 10000 runs  - Download csv file for after every auto run - after every autorun completion dump to debug print log all values of multupliers

@@ -153,7 +153,10 @@
 
         console.log("MESSAGE FROM UNITY: " + message);
 
-
+        if(message.includes("ERROR:") === true){  
+          alert(message);
+          return;
+        }
 
         switch (message) {
           case "SCREEN_MAXIMIZE":
